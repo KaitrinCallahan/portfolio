@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
 import ReactDOM from 'react-dom';
-import animateScrollTo from 'animate-scroll-to';
-import Nav from './assets/nav';
-import Explosion from './explosion';
-import Phone from './phone';
-import StickyText from "./sticky-text";
-import Light from './light';
-import Plx from "react-plx";
+// import animateScroll from 'animated-scroll-to';
+// import Explosion from './explosion';
+// import Phone from './phone';
+// import Links from './links';
+import StickyText from './sticky-text';
+import Plx from './index';
 import './docs.scss';
 
 const titleData = [
@@ -31,13 +30,13 @@ const titleData = [
 
 const Example = class extends React.Component {
   handleScrollTop() {
-    animateScrollTo(0, { minDuration: 3000 });
+    animateScroll(0, { minDuration: 3000 });
   }
 
   render() {
     return (
       <div className='Demo'>
-        <Nav />
+        <Links />
         <div className='Content'>
           <Plx
             tagName='h1'
@@ -56,7 +55,6 @@ const Example = class extends React.Component {
           <Phone />
           <div className='StickyText-trigger' />
           <StickyText />
-          <Light />
         </div>
 
         <div className='Footer'>
@@ -77,5 +75,5 @@ const Example = class extends React.Component {
   }
 };
 
-export default Example;
+
 ReactDOM.render(<Example />, document.getElementById('demo'));
