@@ -40,22 +40,26 @@ const Example = class extends React.Component {
     return (
       <div className="Demo">
         <div class="hero">
-          <Doors />
-          <Nav />
-          <span className="doors-trigger" />
+          {/* <Doors /> */}
 
-          <div className="container-fluid pr-5 hero-content">
-            <div className="row">
-              <div class="col-sm-6"></div>
-              <div class="col-sm-6">
-                <ButtonPrimary
-                  // onClick={() => this.handleHover()}
-                  label="Give Us A Shout"
-                />
-                <h1 className="display-1">Web Design for the Modern World</h1>
-              </div>
+          <div class="hero">
+            <Nav />
+            <div class="hero-container">
+              <h1 class="display-1">Web Design for the Modern Age.</h1>
             </div>
           </div>
+          <div class="divider-pink"></div>
+          <div class="section section-1 container">
+            <div class="divider-black"></div>
+            <h1 class="display-4">Put Your Ideas in the Spotlight</h1>
+          </div>
+          <div class="section section-2 container">
+            <ButtonPrimary
+              // onClick={() => this.handleHover()}
+              label="Give Us A Shout"
+            />
+          </div>
+          <span className="doors-trigger" />
 
           {/* <Plx
             tagName="h1"

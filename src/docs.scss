@@ -56,7 +56,9 @@ html {
 
 body {
   background: $bg-color;
+  font-family: "Share Tech Mono", monospace;
   font-size: 1.8rem;
+  color: black;
 }
 
 html,
@@ -85,7 +87,6 @@ code {
 }
 
 h1 {
-  color: $blue;
   margin-bottom: 5rem;
 }
 
@@ -331,33 +332,15 @@ $phone-ratio: 2.01;
     transform: translateY(50%);
   }
 }
-
 .StickyText-trigger {
-  margin-top: 50vh;
-}
-.hero {
-  height: 100vh;
-}
-.hero-content {
-  padding-top: 30vh;
-  text-align: right;
-}
-.doors-trigger {
   margin-top: 50vh;
 }
 
 //custom styling
-
 img {
   border: none;
 }
-h1 {
-  font-family: "Lora", serif;
-  color: black;
-  font-weight: bold;
-}
 .navbar {
-  // background-color: white;
   padding: 40px;
 }
 .navbar-brand h2 {
@@ -386,4 +369,32 @@ button {
 .button-tertiary {
 }
 .button-knockout {
+}
+.section {
+  height: 100vh;
+}
+.hero {
+  height: 98vh;
+  background-color: #d1d5fe;
+}
+.hero-container h1 {
+  padding-top: 30vh;
+}
+.hero-content {
+  padding-top: 30vh;
+  text-align: right;
+}
+.divider-pink {
+  height: 50px;
+  background-color: rgba(206, 45, 79, 0.3);
+  margin-top: -25px;
+}
+.divider-black {
+  height: 10px;
+  background-color: #000;
+  margin: 50px;
+}
+
+.doors-trigger {
+  margin-top: 50vh;
 }
