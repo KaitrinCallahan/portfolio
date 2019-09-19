@@ -1,4 +1,3 @@
-
 // ------ COlor
 $white: #fff;
 $black: #131517;
@@ -17,11 +16,31 @@ $breakpoint-xl: 1200px;
 $breakpoint-xxl: 1800px;
 $breakpoint-xxxl: 2100px;
 
-@mixin md() { @media (min-width: $breakpoint-md) { @content; } }
-@mixin lg() { @media (min-width: $breakpoint-lg) { @content; } }
-@mixin xl() { @media (min-width: $breakpoint-xl) { @content; } }
-@mixin xxl() { @media (min-width: $breakpoint-xxl) { @content; } }
-@mixin xxxl() { @media (min-width: $breakpoint-xxxl) { @content; } }
+@mixin md() {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+@mixin lg() {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+@mixin xl() {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+@mixin xxl() {
+  @media (min-width: $breakpoint-xxl) {
+    @content;
+  }
+}
+@mixin xxxl() {
+  @media (min-width: $breakpoint-xxxl) {
+    @content;
+  }
+}
 
 html {
   font-size: 10px;
@@ -88,7 +107,7 @@ h4 {
 .Content {
   margin: 0 auto;
   max-width: 60rem;
-  padding: 5rem 2rem;
+  // padding: 5rem 2rem;
   position: relative;
   text-align: center;
   width: 100%;
@@ -134,7 +153,7 @@ h4 {
 
   a {
     font-size: 2rem;
-    margin: .5rem;
+    margin: 0.5rem;
     padding: 0.4rem 0;
   }
 }
@@ -210,8 +229,12 @@ $phone-ratio: 2.01;
   text-align: center;
   width: 100%;
 
-  &:nth-child(2) { background: $blue; }
-  &:nth-child(3) { background: $green; }
+  &:nth-child(2) {
+    background: $blue;
+  }
+  &:nth-child(3) {
+    background: $green;
+  }
 
   @include md {
     font-size: 5rem;
@@ -311,4 +334,56 @@ $phone-ratio: 2.01;
 
 .StickyText-trigger {
   margin-top: 50vh;
+}
+.hero {
+  height: 100vh;
+}
+.hero-content {
+  padding-top: 30vh;
+  text-align: right;
+}
+.doors-trigger {
+  margin-top: 50vh;
+}
+
+//custom styling
+
+img {
+  border: none;
+}
+h1 {
+  font-family: "Lora", serif;
+  color: black;
+  font-weight: bold;
+}
+.navbar {
+  // background-color: white;
+  padding: 40px;
+}
+.navbar-brand h2 {
+  margin: 0px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 2.2em;
+}
+button {
+  font-family: "Share Tech Mono", monospace;
+}
+.button-primary {
+  background: #fff;
+  color: #2005f5;
+  padding: 15px 50px;
+  border: 2px solid #2005f5;
+  box-shadow: 7px 7px #2005f5;
+  transition: 0.2s;
+}
+.button-primary:hover {
+  box-shadow: 11px 11px #2005f5;
+  transition: 0.2s;
+}
+.button-secondary {
+}
+.button-tertiary {
+}
+.button-knockout {
 }
