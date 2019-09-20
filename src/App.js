@@ -10,6 +10,7 @@ import Nav from "./components/common/nav";
 import ButtonPrimary from "./components/common/ButtonPrimary";
 import GetInTouch from "./components/GetInTouch";
 import Doors from "./components/doors";
+import CarouselPrimary from "./components/common/CarouselPrimary";
 
 const titleData = [
   {
@@ -52,6 +53,7 @@ const Example = class extends React.Component {
           <div class="section section-1 container">
             <div class="divider-black"></div>
             <h1 class="display-4">Put Your Ideas in the Spotlight</h1>
+            <CarouselPrimary />
           </div>
           <div class="section section-2 container">
             <ButtonPrimary
@@ -83,7 +85,7 @@ const Example = class extends React.Component {
           <Light /> */}
         </div>
 
-        <div className="Footer">
+        {/* <div className="Footer">
           <div className="Content">
             <h1>Plx</h1>
             <h2>React Parallax component</h2>
@@ -95,7 +97,7 @@ const Example = class extends React.Component {
             </div>
             <button onClick={() => this.handleScrollTop()}>Back to top</button>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }

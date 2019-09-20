@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Example from "./App";
 import * as serviceWorker from "./services/serviceWorker";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(<Example />, document.getElementById("root"));
 
