@@ -6,31 +6,65 @@ import Explosion from "./components/explosion";
 import Phone from "./components/phone";
 import StickyText from "./components/sticky-text";
 import Light from "./components/light";
-import Nav from "./components/common/nav";
-import ButtonPrimary from "./components/common/ButtonPrimary";
+import Nav from "./components/common/nav.js";
+
 import GetInTouch from "./components/GetInTouch";
 import Doors from "./components/doors";
+import Squares from "./components/Squares";
 import CarouselPrimary from "./components/common/CarouselPrimary";
+import Typist from "react-typist";
+import floor from "./assets/img/triangle.svg";
+import line from "./assets/img/line.svg";
+import Contact from "./components/contact";
+import Footer from "./components/common/Footer";
+import Technologies from "./components/Technologies.js";
 
-const titleData = [
+const raiseFloor = [
   {
-    start: "self",
-    startOffset: 50,
-    duration: 200,
+    start: ".floor-trigger",
+    startOffset: 0,
+    duration: 250,
+    easing: [0.25, 0.1, 0.6, 1.5],
     properties: [
       {
-        startValue: 1,
-        endValue: -360,
-        property: "rotate"
+        startValue: 34,
+        endValue: 13,
+        unit: "vh",
+        property: "translateY"
       },
       {
-        startValue: "#e34e47",
-        endValue: "#995eb2",
-        property: "color"
+        startValue: 1.0,
+        endValue: 1.5,
+
+        property: "scale"
       }
     ]
   }
 ];
+const slideIn = [
+  {
+    start: "self",
+    startOffset: 200,
+    duration: 200,
+    easing: [0.25, 0.1, 0.6, 1.0],
+    properties: [
+      {
+        startValue: -90,
+        endValue: 0,
+        unit: "vw",
+        property: "translateX"
+      }
+    ]
+  }
+];
+
+const floorStyle = {
+  width: "100vw"
+};
+
+const testArea = {
+  height: "2000px"
+};
 
 const Example = class extends React.Component {
   handleScrollTop() {
@@ -40,64 +74,40 @@ const Example = class extends React.Component {
   render() {
     return (
       <div className="Demo">
-        <div class="hero">
+        <div className="hero">
+          <Nav />
           {/* <Doors /> */}
 
-          <div class="hero">
-            <Nav />
-            <div class="hero-container">
-              <h1 class="display-1">Web Design for the Modern Age.</h1>
-            </div>
+          <div className="hero-container">
+            <Typist>
+              <h1 className="display-3 front">
+                Web Design for the Modern Age.
+              </h1>
+            </Typist>
           </div>
-          <div class="divider-pink"></div>
-          <div class="section section-1 container">
-            <div class="divider-black"></div>
-            <h1 class="display-4">Put Your Ideas in the Spotlight</h1>
-            <CarouselPrimary />
-          </div>
-          <div class="section section-2 container">
-            <ButtonPrimary
-              // onClick={() => this.handleHover()}
-              label="Give Us A Shout"
-            />
-          </div>
-          <span className="doors-trigger" />
-
-          {/* <Plx
-            tagName="h1"
-            className="Examples"
-            parallaxData={titleData}
-            // eslint-disable-next-line no-console
-            onPlxStart={() => console.log("Plx - onPlxStart callback ")}
-            // eslint-disable-next-line no-console
-            onPlxEnd={() => console.log("Plx - onPlxEnd callback")}
-          >
-            Examples
-          </Plx> */}
-
-          {/* <h3>Make things explode</h3>
-          <Explosion />
-          <h3>Animate nested elements</h3>
-          <Phone />
-          <div className="StickyText-trigger" />
-          <StickyText /> */}
-          {/* <GetInTouch />
-          <Light /> */}
+          <div className="floor-trigger"></div>
+          <Plx style={floorStyle} parallaxData={raiseFloor}>
+            <img src={floor} className="full" />
+          </Plx>
         </div>
+        <Plx parallaxData={slideIn}>
+          {/* <img src={line} alt="moving line for visual effects"></img> */}
+          <svg width="3610x" height="5px" viewbox="0 0 361 5">
+            <rect width="100" height="100" fill="#000" />
+          </svg>
+        </Plx>
 
-        {/* <div className="Footer">
-          <div className="Content">
-            <h1>Plx</h1>
-            <h2>React Parallax component</h2>
-            <div>Awesome isn&#39;t it?</div>
-            <div className="Footer-links">
-              <a href="https://muffinman.io">My blog</a>
-              <a href="https://www.npmjs.com/package/react-plx">npm</a>
-              <a href="https://github.com/Stanko/react-plx">GitHub</a>
-            </div>
-            <button onClick={() => this.handleScrollTop()}>Back to top</button>
-          </div>
-        </div> */}
+        <div class="container-fluid">
+          <Squares />
+        </div>
+        <div className="squaresTrigger"></div>
+        <div className="trigger"></div>
+        <Explosion />
+
+        <Contact />
+
+        <div style={testArea}></div>
+        <Footer />
       </div>
     );
   }

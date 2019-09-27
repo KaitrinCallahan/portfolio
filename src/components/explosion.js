@@ -1,27 +1,27 @@
-import React from 'react';
+import React from "react";
 import Plx from "react-plx";
 
 const BOXES_PER_ROW = 4;
-const ROWS = 4;
+const ROWS = 3;
 const BOXES = [];
 
 const COLORS = [
-  '#2abb9c',
-  '#39cb74',
-  '#3a99d9',
-  '#9a5cb4',
-  '#239f85',
-  '#30ad62',
-  '#2f81b7',
-  '#8d48ab',
-  '#f0c330',
-  '#e47d31',
-  '#e54d42',
-  '#95a5a6',
-  '#f19b2c',
-  '#d15419',
-  '#be3a31',
-  '#7f8c8d',
+  "#2abb9c",
+  "#39cb74",
+  "#3a99d9",
+  "#9a5cb4",
+  "#239f85",
+  "#30ad62",
+  "#2f81b7",
+  "#8d48ab",
+  "#f0c330",
+  "#e47d31",
+  "#e54d42",
+  "#95a5a6",
+  "#f19b2c",
+  "#d15419",
+  "#be3a31",
+  "#7f8c8d"
 ];
 
 for (let i = 0; i < ROWS; i++) {
@@ -42,44 +42,44 @@ for (let i = 0; i < ROWS; i++) {
     BOXES[i].push({
       data: [
         {
-          start: 'self',
-          startOffset: '40vh',
+          start: "self",
+          startOffset: "40vh",
           duration: 500,
-          name: 'first',
+          name: "first",
           properties: [
             {
               startValue: 1,
               endValue: 0,
-              property: 'opacity',
+              property: "opacity"
             },
             {
               startValue: 0,
               endValue: Math.random() * rotationFactor,
-              property: 'rotate',
+              property: "rotate"
             },
             {
               startValue: 1,
               endValue: 1 + Math.random() * scaleFactor,
-              property: 'scale',
+              property: "scale"
             },
             {
               startValue: 0,
               endValue: (start + Math.random() * offset) * xFactor,
-              property: 'translateX',
-              unit: '%',
+              property: "translateX",
+              unit: "%"
             },
             {
               startValue: 0,
               endValue: (start + Math.random() * offset) * yFactor,
-              property: 'translateY',
-              unit: '%',
-            },
-          ],
-        },
+              property: "translateY",
+              unit: "%"
+            }
+          ]
+        }
       ],
       style: {
-        backgroundColor: color,
-      },
+        backgroundColor: color
+      }
     });
   }
 }
@@ -92,10 +92,10 @@ export default class Explosion extends React.Component {
       row.forEach((box, boxIndex) => {
         boxes.push(
           <Plx
-            key={ `${ index } ${ boxIndex }` }
-            className='Explosion-box'
-            parallaxData={ box.data }
-            style={ box.style }
+            key={`${index} ${boxIndex}`}
+            className="Explosion-box"
+            parallaxData={box.data}
+            style={box.style}
           />
         );
       });
@@ -105,10 +105,6 @@ export default class Explosion extends React.Component {
   }
 
   render() {
-    return (
-      <div className='Explosion'>
-        { this.renderBoxes() }
-      </div>
-    );
+    return <div className="Explosion">{this.renderBoxes()}</div>;
   }
 }

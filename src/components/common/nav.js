@@ -1,14 +1,28 @@
 import React from "react";
 import icon from "../../assets/img/hamburger.svg";
+import { isAbsolute } from "path";
+
+// function openNav(x) {
+//   x.style.display = "block";
+// }
+// function closeNav(x) {
+//   x.style.display = "none";
+// }
+const navStyle = {
+  zIndex: 1,
+  position: "fixed",
+  width: "100vw",
+  backgroundColor: "white"
+};
 
 function Nav() {
   return (
-    <nav class="navbar navbar-light">
-      <span class="navbar-brand mb-0">
+    <nav className="navbar p-0" style={navStyle}>
+      <span className="navbar-brand mb-0 padding-s">
         <h2>Kaitrin Callahan</h2>
       </span>
       <button
-        className="navbar-toggler"
+        className="navbar-toggler padding-s"
         type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -19,44 +33,28 @@ function Nav() {
         {<img src={icon} alt="dropdown button" />}
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">
-              Home <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Link
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">
-                Action
-              </a>
-              <a class="dropdown-item" href="#">
-                Another action
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
-                Something else here
-              </a>
-            </div>
-          </li>
-        </ul>
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className="navbar-container">
+          <div className="navbar-overlay-back">
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item active">
+                <a className="nav-link" href="#">
+                  Work <span className="sr-only">(current)</span>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  About
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </nav>
   );
