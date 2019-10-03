@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Plx from "react-plx";
 import animateScrollTo from "animate-scroll-to";
 // import Typist from "react-typist";
 
@@ -14,6 +13,9 @@ const Example = class extends React.Component {
     animateScrollTo(0, { minDuration: 3000 });
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   render() {
     return (
       <div className="Demo">
@@ -31,8 +33,9 @@ const Example = class extends React.Component {
           <div className="container">
             <div className="row justify-content-between">
               <div className="col-sm-6">
-                <div classname="">
-                  <h2>Hey I'm Kaitrin</h2>
+                <div >
+                  <h2>Hey I'm</h2>
+                  <h2 className="pl-11 pb-1 ">aitrin</h2>
                   <h3>
                     and I am a Web Developer/Designer with extensive experience
                     building out mobile-response websites
@@ -50,7 +53,7 @@ const Example = class extends React.Component {
         <div className="section three d-flex align-items-center">
           <div className="container ">
             <div className="row justify-content-center">
-              <h2>I work on</h2>
+              <h2 className="pl-5 ml-4 pb-1">work on</h2>
             </div>
             <div className="row justify-content-center pt-4">
               <div className="col-xs-4">
@@ -71,7 +74,7 @@ const Example = class extends React.Component {
           <div className="container">
             <div className="row justify-content-between">
               <div className="col-xs-6">
-                <div classname="">
+                <div className="">
                   <h4>
                     <a href="mailto:hello@kaitrincallahan@gmail.com?subject=Saying Hello!">
                       hello@kaitrincallahan@gmail.com
@@ -88,7 +91,8 @@ const Example = class extends React.Component {
                 </div>
               </div>
               <div className="col-xs-6">
-                <h2>Say Hello</h2>
+                <h2>Say</h2>
+                <h2>ello</h2>
               </div>
             </div>
           </div>

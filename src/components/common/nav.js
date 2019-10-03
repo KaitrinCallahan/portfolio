@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import icon from "../../assets/img/hamburger.svg";
 const navStyle = {
   // zIndex: 1,

@@ -1,6 +1,5 @@
 import React from "react";
 import Plx from "react-plx";
-import "../docs.scss";
 
 const textData = [
   {
@@ -27,7 +26,7 @@ const textData = [
     properties: [
       {
         startValue: -50,
-        endValue: -100,
+        endValue: -105,
         unit: "vh",
         property: "translateY"
       },

@@ -56,10 +56,16 @@ h1,
 h2 {
   transition: 180ms linear;
 }
-h1:hover,
-h2:hover {
+h1:hover {
   color: $navy;
   transition: 120ms linear;
+}
+h2+h2{
+  margin-top: .8rem;
+
+}
+.pl-11{
+  padding-left: 11rem;
 }
 
 // .Content {
@@ -247,4 +253,8 @@ img {
 .col {
   border-left: 1px #d1d5fe solid;
   border-right: 1px #d1d5fe solid;
+}
+
+.underline div {
+  display: inline-block;
 }
