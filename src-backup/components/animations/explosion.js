@@ -6,22 +6,22 @@ const ROWS = 3;
 const BOXES = [];
 
 const COLORS = [
-  "#2abb9c",
-  "#39cb74",
-  "#3a99d9",
-  "#9a5cb4",
-  "#239f85",
-  "#30ad62",
-  "#2f81b7",
-  "#8d48ab",
-  "#f0c330",
-  "#e47d31",
-  "#e54d42",
-  "#95a5a6",
-  "#f19b2c",
-  "#d15419",
-  "#be3a31",
-  "#7f8c8d"
+  "#2005F5",
+  "#CE2D4F",
+  "#E6E8E6",
+  "#F4FF52",
+  "#D1D5FE",
+  "#2005F5",
+  "#CE2D4F",
+  "#E6E8E6",
+  "#F4FF52",
+  "#D1D5FE",
+  "#2005F5",
+  "#CE2D4F",
+  "#E6E8E6",
+  "#F4FF52",
+  "#D1D5FE",
+  "#2005F5"
 ];
 
 for (let i = 0; i < ROWS; i++) {
@@ -78,7 +78,8 @@ for (let i = 0; i < ROWS; i++) {
         }
       ],
       style: {
-        backgroundColor: color
+        backgroundColor: color,
+        borderRadius: 0
       }
     });
   }

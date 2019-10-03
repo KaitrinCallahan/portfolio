@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="263px" viewBox="0 0 140 263" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>rectangle</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="block" transform="translate(-259.000000, -228.000000)">
+            <g id="hero" transform="translate(-9.000000, 15.000000)">
+                <g id="rectangle" transform="translate(338.000000, 344.000000) scale(-1, 1) rotate(-1.000000) translate(-338.000000, -344.000000) translate(260.000000, 212.000000)">
+                    <polygon id="Rectangle" stroke="#202020" stroke-width="2" transform="translate(67.000000, 139.576233) rotate(10.000000) translate(-67.000000, -139.576233) " points="20.273961 23.7804568 107.744521 26.4491341 113.726039 255.37201 26.2554792 252.703332"></polygon>
+                    <polygon id="Rectangle" stroke="#202020" stroke-width="2" transform="translate(89.000000, 124.244395) rotate(10.000000) translate(-89.000000, -124.244395) " points="42.273961 8.44861823 129.744521 11.1172956 135.726039 240.040171 48.2554792 237.371494"></polygon>
+                    <path d="M41.0123321,17.2259853 L62.0123321,1.440271" id="Line-4" stroke="#111111" stroke-linecap="square"></path>
+                    <path d="M126.162066,35.3746241 L148.162066,19.5889098" id="Line-4" stroke="#111111" stroke-linecap="square"></path>
+                    <path d="M93.1166394,263.095945 L115.116639,247.31023" id="Line-4" stroke="#111111" stroke-linecap="square"></path>
+                    <path d="M7.14814981,243.875674 L29.1481498,228.08996" id="Line-4" stroke="#111111" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

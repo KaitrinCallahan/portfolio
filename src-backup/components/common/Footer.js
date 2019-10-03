@@ -4,10 +4,11 @@ import git from "../../assets/img/git.svg";
 import email from "../../assets/img/email.svg";
 
 const footer = {
-  background: "#E6E8E6",
-  height: "90px",
-  color: "black",
-  padding: "0px 30px"
+  background: "#2D2D2D",
+  color: "white",
+  padding: "0px 30px",
+  fontWeight: 400
+  // fontSize: "1.05em"
 };
 
 function Footer() {

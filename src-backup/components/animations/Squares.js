@@ -1,5 +1,6 @@
 import React from "react";
 import Plx from "react-plx";
+import rocket from "../../assets/img/rocket.svg";
 
 const pinkConfig = [
   {
