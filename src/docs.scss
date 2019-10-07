@@ -1,13 +1,16 @@
 // ------ COlor
 $white: #fff;
-$black: #131517;
+$black: #000000;
 $grey: #ddd;
+$gray: #dfd9e2;
 $grey-light: #f3f3f5;
-$red: #fc6e22;
-$pink: #e560d3;
-$yellow: #f5d300;
-$purple: #652ec7;
-$navy: #33135c;
+$red: #d1462f;
+$pink: #e8e8e3;
+$yellow1: #f5d300;
+$yellow2: #f2cd60;
+$blue: #202734;
+$purple: #8f82f9;
+$navy: #652ec7;
 $bg-color: #fff;
 
 html {
@@ -40,17 +43,17 @@ a:hover {
 }
 
 h1 {
-  margin-bottom: 5rem;
+  // margin-bottom: 5rem;
   letter-spacing: 1.98px;
-  font-size: 2em;
+  font-size: 72px;
   font-weight: black;
 }
-
-h2,
-h3,
-h4 {
-  margin-top: 5rem;
-}
+// h1,
+// h2,
+// h3,
+// h4 {
+//   margin-top: 5rem;
+// }
 
 h1,
 h2 {
@@ -60,11 +63,10 @@ h1:hover {
   color: $navy;
   transition: 120ms linear;
 }
-h2+h2{
-  margin-top: .8rem;
-
+h2 + h2 {
+  margin-top: 0.8rem;
 }
-.pl-11{
+.pl-11 {
   padding-left: 11rem;
 }
 
@@ -78,7 +80,7 @@ h2+h2{
 // }
 
 h1 {
-  font-size: 6.8em;
+  font-size: 10rem;
   font-weight: 700;
 }
 h2 {
@@ -88,6 +90,7 @@ h2 {
 h3 {
   font-size: 1.8em;
   font-weight: 500;
+  color: black;
 }
 
 .underline {
@@ -226,7 +229,8 @@ img {
 }
 .hero {
   // height: 100vh;
-  background-color: $yellow;
+  background-color: $yellow1;
+  // border: 50px solid $white;
   z-index: -1;
 }
 .hero-container {
@@ -241,13 +245,13 @@ img {
   text-align: right;
 }
 .two {
-  background-color: $pink;
-}
-.three {
   background-color: $purple;
 }
-.four {
+.three {
   background-color: $navy;
+}
+.four {
+  background-color: $black;
 }
 
 .col {
@@ -257,4 +261,55 @@ img {
 
 .underline div {
   display: inline-block;
+}
+.pushChar-left {
+  padding-left: 90px;
+  padding-bottom: 5px;
+}
+.pushChar-bottom {
+  padding-bottom: 150px;
+  padding-left: 10px;
+  // padding-bottom: 5px;
+}
+.flex-center {
+  // display: flex; // make us of Flexbox
+  // align-items: left; // does vertically center the desired content
+  // justify-content: left; // horizontally centers single line items
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  vertical-align: top;
+  height: 100px;
+}
+
+.appear-text {
+  // bottom: 0;
+  // left: 0;
+  // max-width: 54rem;
+  opacity: 0;
+  // padding: 0 2rem;
+  // position: fixed;
+  // width: 100%;
+}
+.padding-25 {
+  padding-top: 25vh;
+  padding-bottom: 0px;
+}
+.padding-r-25 {
+  padding-right: 25vw;
+}
+.bottom {
+  position: absolute;
+  bottom: 100px;
+}
+
+.absolute-top {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  z-index: 1;
 }

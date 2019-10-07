@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="126px" viewBox="0 0 64 126" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M31.5,4 C46.1355459,4 58,15.8644541 58,30.5 L58,60.5 C58,75.1355459 46.1355459,87 31.5,87 C16.8644541,87 5,75.1355459 5,60.5 L5,30.5 C5,15.8644541 16.8644541,4 31.5,4 Z" id="Rectangle" stroke="#0B0B0B" stroke-width="6"></path>
+        <text id="scroll-down" font-family="ArialMT, Arial" font-size="8" font-weight="normal" letter-spacing="0.25483871" fill="#000000">
+            <tspan x="10" y="102">s</tspan>
+            <tspan x="14.2548387" y="102">croll down</tspan>
+        </text>
+        <circle id="Oval" stroke="#1A1A1A" stroke-width="4" cx="31.5" cy="31.5" r="7.5"></circle>
+        <polyline id="Line" stroke="#000000" stroke-width="3" stroke-linecap="square" transform="translate(31.529222, 110.154792) rotate(-51.000000) translate(-31.529222, -110.154792) " points="25.8512042 102 24 117.157638 39.0584444 118.309583"></polyline>
+    </g>
+</svg>

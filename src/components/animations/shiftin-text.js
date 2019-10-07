@@ -2,25 +2,24 @@ import React from "react";
 import Plx from "react-plx";
 const LETTERS = [];
 
-
 const DATA = [
-  { ltr: "K", dur: 500, opacity: 1, trans: 103 },
-  { ltr: "A", dur: 650, opacity: 0, trans: -50 },
-  { ltr: "I", dur: 150, opacity: 1, trans: -50 },
-  { ltr: "T", dur: 150, opacity: 0, trans: -50 },
-  { ltr: "R", dur: 150, opacity: 0, trans: 50 },
-  { ltr: "I", dur: 1100, opacity: 1, trans: 187 },
-  { ltr: "N", dur: 150, opacity: 0, trans: 40 },
+  { ltr: "K", dur: 900, opacity: 1, trans: 100 },
+  { ltr: "A", dur: 2000, opacity: 0, trans: -100 },
+  { ltr: "I", dur: 600, opacity: 0, trans: 100 },
+  { ltr: "T", dur: 600, opacity: 0, trans: -50 },
+  { ltr: "R", dur: 2000, opacity: 0, trans: 150 },
+  { ltr: "I", dur: 1700, opacity: 1, trans: 180 },
+  { ltr: "N", dur: 1000, opacity: 0, trans: -150 },
   { ltr: "_", dur: 70, opacity: 0, trans: -50 },
-  { ltr: "C", dur: 150, opacity: 0, trans: 70 },
-  { ltr: "A", dur: 50, opacity: 0, trans: -50 },
-  { ltr: "L", dur: 150, opacity: 0, trans: -300 },
-  { ltr: "L", dur: 100, opacity: 0, trans: 100 },
+  { ltr: " ", dur: 70, opacity: 0, trans: -50 },
+  { ltr: "C", dur: 1000, opacity: 0, trans: 150 },
+  { ltr: "A", dur: 1200, opacity: 0, trans: -50 },
+  { ltr: "L", dur: 2000, opacity: 0, trans: 200 },
+  { ltr: "L", dur: 2000, opacity: 0, trans: -200 },
   { ltr: "A", dur: 150, opacity: 0, trans: 30 },
-  { ltr: "H", dur: 1600, opacity: 1, trans: 307 },
-  { ltr: "A", dur: 150, opacity: 0, trans: 350 },
-  { ltr: "N", dur: 150, opacity: 0, trans: 50 },
-
+  { ltr: "H", dur: 2950, opacity: 1, trans: 300 },
+  { ltr: "A", dur: 1500, opacity: 0, trans: -100 },
+  { ltr: "N", dur: 2000, opacity: 0, trans: 100 }
 ];
 
 for (let i = 0; i < DATA.length; i++) {
@@ -31,7 +30,9 @@ for (let i = 0; i < DATA.length; i++) {
     data: [
       {
         start: 55,
+        startOffset: 100,
         duration: DATA[i].dur,
+        easing: [0.25, 0.1, 0.53, 1],
         unit: "vh",
         properties: [
           {
@@ -46,10 +47,10 @@ for (let i = 0; i < DATA.length; i++) {
             property: "translateY"
           },
           {
-            startValue: 1,
-            endValue: .85,
+            startValue: 0.9,
+            endValue: 0.85,
             property: "scale"
-          },
+          }
         ]
       }
     ]
@@ -62,18 +63,18 @@ export default class ShiftinText extends React.Component {
 
     LETTERS.forEach((row, index) => {
       row.forEach((ltr, boxIndex) => {
-        if(ltr.val === "_"){
-          letters.push("______")
-        }
-        else
-        letters.push(
-          <Plx
-            key={`${index} ${ltr}`}
-            parallaxData={ltr.data}
-            animateWhenNotInViewport={ true }
-          ><h1>{ltr.val}</h1>
+        if (ltr.val === "_") {
+          letters.push("______");
+        } else
+          letters.push(
+            <Plx
+              key={`${index} ${ltr}`}
+              parallaxData={ltr.data}
+              animateWhenNotInViewport={true}
+            >
+              <h1>{ltr.val}</h1>
             </Plx>
-        );
+          );
       });
     });
     return letters;

@@ -1,12 +1,34 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import animateScrollTo from "animate-scroll-to";
+import Plx from "react-plx";
 // import Typist from "react-typist";
 
 import Nav from "./components/common/nav";
 import ShiftinText from "./components/animations/shiftin-text";
+import Appear from "./components/animations/appear";
+import ParaAppear from "./components/animations/paraAppear";
 import "./docs.scss";
 import placeholder from "./assets/img/placeholder.png";
+import headshot from "./assets/img/headshot.jpg";
+import hand from "./assets/img/hand.gif";
+import scroll from "./assets/img/scroll.svg";
+import heroDivider from "./assets/img/Oval.png";
+
+const appearconfig = [
+  {
+    start: "self",
+    duration: "15vh",
+    // startOffset: 400,
+    properties: [
+      {
+        startValue: 1,
+        endValue: 0,
+        property: "opacity"
+      }
+    ]
+  }
+];
 
 const Example = class extends React.Component {
   handleScrollTop() {
@@ -14,7 +36,7 @@ const Example = class extends React.Component {
   }
 
   componentDidMount() {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   }
   render() {
     return (
@@ -22,39 +44,76 @@ const Example = class extends React.Component {
         <Nav />
         {/* SECTION ONE: INTRO */}
         <div className="section hero d-flex align-items-center justify-content-center">
-          <div className="underline">
-            {/* <h1 className="">KAITRIN CALLAHAN</h1> */}
-            <ShiftinText />
+          <div className="container text-center">
+            <div className="underline">
+              {/* <h1 className="">KAITRIN CALLAHAN</h1> */}
+              <ShiftinText />
+            </div>
+            <Plx parallaxData={appearconfig} animateWhenNotInViewport={true}>
+              <img src={scroll} alt="scroll down" className="bottom" />
+            </Plx>
           </div>
         </div>
 
         {/* SECTION TWO: ABOUT */}
-        <div className="section two d-flex align-items-center">
-          <div className="container">
-            <div className="row justify-content-between">
-              <div className="col-sm-6">
-                <div >
-                  <h2>Hey I'm</h2>
-                  <h2 className="pl-11 pb-1 ">aitrin</h2>
-                  <h3>
-                    and I am a Web Developer/Designer with extensive experience
-                    building out mobile-response websites
-                  </h3>
+        <div className="section two d-flex justify-content-center">
+          {/* <img
+            src={heroDivider}
+            className="absolute-top"
+            alt="decorative divider into next section"
+          /> */}
+          <div className="d-flex align-items-center">
+            <div className="container">
+              <div className="col-md-6"></div>
+              <div className="row justify-content-between align-items-center">
+                <div className="col-md-6">
+                  <h2 className="pushChar-bottom">Hi, i'm</h2>
+                  <div className="flex-center">
+                    {/* <h2 className="pushChar-left ">aitrin</h2> */}
+                    <Appear label="aitrin"></Appear>
+
+                    <ParaAppear
+                      text="and I am a Web Developer/Designer with extensive
+                      experience building out mobile-response websites"
+                    ></ParaAppear>
+                  </div>
                 </div>
-              </div>
-              <div className="col-sm-6">
-                <img src={placeholder} alt="picture of Kaitrin" />
+
+                <div className="col-md-6">
+                  <img src={headshot} alt="picture of Kaitrin" />
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <div className="sec1-trigger"></div>
 
         {/* SECTION THREE: WORK */}
-        <div className="section three d-flex align-items-center">
+        {/* <div className="section three d-flex align-items-center">
           <div className="container ">
             <div className="row justify-content-center">
-              <h2 className="pl-5 ml-4 pb-1">work on</h2>
+              <Appear label=" work on"></Appear>
             </div>
+            <div className="row justify-content-center pt-4">
+              <div className="col-xs-4">
+                <img src={placeholder} alt="" />
+              </div>
+              <div className="col-xs-4">
+                <img src={placeholder} alt="" />
+              </div>
+              <div className="col-xs-4">
+                <img src={placeholder} alt="" />
+              </div>
+            </div>
+          </div>
+        </div> */}
+        {/* SECTION THREE TEST */}
+        <div className="section three d-flex">
+          <div className="container ">
+            <div className="padding-25 text-center pr-5">
+              <Appear label=" work on"></Appear>
+            </div>
+            <div className="row justify-content-center"></div>
             <div className="row justify-content-center pt-4">
               <div className="col-xs-4">
                 <img src={placeholder} alt="" />
@@ -72,27 +131,32 @@ const Example = class extends React.Component {
         {/* SECTION 4: CONTACT */}
         <div className="section four d-flex align-items-center">
           <div className="container">
-            <div className="row justify-content-between">
-              <div className="col-xs-6">
-                <div className="">
-                  <h4>
-                    <a href="mailto:hello@kaitrincallahan@gmail.com?subject=Saying Hello!">
-                      hello@kaitrincallahan@gmail.com
-                    </a>
-                  </h4>
-                </div>
-                <div className="social-icons">
-                  <a href="./">
-                    <p>linkedin</p>
-                  </a>
-                  <a href="./">
-                    <p>Github</p>
-                  </a>
-                </div>
+            <div className="row justify-content-center align-items-center">
+              <div className="col-md-6">
+                <img src={hand} alt="hand saying hello"></img>
               </div>
-              <div className="col-xs-6">
-                <h2>Say</h2>
-                <h2>ello</h2>
+
+              <div className="col-md-6 text-right">
+                <h2 className="pushChar-bottom pr-5">Say</h2>
+                <div className="flex-center pr-5 mr-4">
+                  {/* <h2 className="pushChar-left ">aitrin</h2> */}
+                  <Appear label="ello"></Appear>
+                  <div>
+                    <h4>
+                      <a href="mailto:hello@kaitrincallahan@gmail.com?subject=Saying Hello!">
+                        hello@kaitrincallahan@gmail.com
+                      </a>
+                    </h4>
+                    <div className="social-icons">
+                      <a href="./">
+                        <p>linkedin</p>
+                      </a>
+                      <a href="./">
+                        <p>Github</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
