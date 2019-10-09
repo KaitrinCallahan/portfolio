@@ -3,7 +3,7 @@ import Plx from "react-plx";
 const LETTERS = [];
 
 const DATA = [
-  { ltr: "K", dur: 900, opacity: 1, trans: 100 },
+  { ltr: "K", dur: 750, opacity: 1, trans: 100 },
   { ltr: "A", dur: 2000, opacity: 0, trans: -100 },
   { ltr: "I", dur: 600, opacity: 0, trans: 100 },
   { ltr: "T", dur: 600, opacity: 0, trans: -50 },
@@ -17,7 +17,7 @@ const DATA = [
   { ltr: "L", dur: 2000, opacity: 0, trans: 200 },
   { ltr: "L", dur: 2000, opacity: 0, trans: -200 },
   { ltr: "A", dur: 150, opacity: 0, trans: 30 },
-  { ltr: "H", dur: 2950, opacity: 1, trans: 300 },
+  { ltr: "H", dur: 2500, opacity: 1, trans: 300 },
   { ltr: "A", dur: 1500, opacity: 0, trans: -100 },
   { ltr: "N", dur: 2000, opacity: 0, trans: 100 }
 ];

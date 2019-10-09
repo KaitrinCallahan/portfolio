@@ -31,18 +31,18 @@ function Nav() {
           <div className="navbar-container">
             <div className="navbar-overlay-back">
               <ul className="navbar-nav mr-auto">
+                <li className="nav-item">
+                  <a className="nav-link" href="#about">
+                    About
+                  </a>
+                </li>
                 <li className="nav-item active">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="#work">
                     Work <span className="sr-only">(current)</span>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    About
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="#contact">
                     Contact
                   </a>
                 </li>
@@ -53,10 +53,10 @@ function Nav() {
       </nav>
       <div className="navbar vertical-nav">
         <div>
-          <a href="./linkedin">linkedin</a>
+          <a href="https://www.linkedin.com/in/kaitrin-callahan/">linkedin</a>
         </div>
         <div>
-          <a href="./github">Github</a>
+          <a href="https://github.com/KaitrinCallahan">Github</a>
         </div>
       </div>
     </React.Fragment>

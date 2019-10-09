@@ -44,7 +44,7 @@ const Example = class extends React.Component {
         <Nav />
         {/* SECTION ONE: INTRO */}
         <div className="section hero d-flex align-items-center justify-content-center">
-          <div className="container text-center">
+          <div className="container text-center padding-20">
             <div className="underline">
               {/* <h1 className="">KAITRIN CALLAHAN</h1> */}
               <ShiftinText />
@@ -56,7 +56,10 @@ const Example = class extends React.Component {
         </div>
 
         {/* SECTION TWO: ABOUT */}
-        <div className="section two d-flex justify-content-center">
+        <div
+          className="section two d-flex justify-content-center bg-divider"
+          id="about"
+        >
           {/* <img
             src={heroDivider}
             className="absolute-top"
@@ -85,8 +88,8 @@ const Example = class extends React.Component {
               </div>
             </div>
           </div>
+          <div className="sec1-trigger"></div>
         </div>
-        <div className="sec1-trigger"></div>
 
         {/* SECTION THREE: WORK */}
         {/* <div className="section three d-flex align-items-center">
@@ -108,14 +111,14 @@ const Example = class extends React.Component {
           </div>
         </div> */}
         {/* SECTION THREE TEST */}
-        <div className="section three d-flex">
+        <div className="section three d-flex" id="work">
           <div className="container ">
             <div className="padding-25 text-center pr-5">
               <Appear label=" work on"></Appear>
             </div>
             <div className="row justify-content-center"></div>
             <div className="row justify-content-center pt-4">
-              <div className="col-xs-4">
+              {/* <div className="col-xs-4">
                 <img src={placeholder} alt="" />
               </div>
               <div className="col-xs-4">
@@ -123,13 +126,21 @@ const Example = class extends React.Component {
               </div>
               <div className="col-xs-4">
                 <img src={placeholder} alt="" />
-              </div>
+              </div> */}
+              <Plx>
+                <ul>
+                  <li>React</li>
+                  <li>Angular</li>
+                  <li>HTML</li>
+                  <li>CSS/Bootstrap</li>
+                </ul>
+              </Plx>
             </div>
           </div>
         </div>
 
         {/* SECTION 4: CONTACT */}
-        <div className="section four d-flex align-items-center">
+        <div className="section four d-flex align-items-center" id="contact">
           <div className="container">
             <div className="row justify-content-center align-items-center">
               <div className="col-md-6">

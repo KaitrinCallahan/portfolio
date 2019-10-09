@@ -4,8 +4,8 @@ import Plx from "react-plx";
 const appearData = [
   {
     start: ".sec1-trigger",
-    duration: "20vh",
-    startOffset: 0,
+    duration: "30vh",
+    startOffset: 650,
     properties: [
       {
         startValue: 0.0,
